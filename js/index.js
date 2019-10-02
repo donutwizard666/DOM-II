@@ -106,3 +106,22 @@ mouseMove.addEventListener("mouseout", () => {
 
 
 //Event Propagation//
+
+const eventProp = document.querySelector('.intro h2');
+    eventProp.addEventListener("click", () => {
+        eventProp.style.backgroundColor = "MediumAquamarine";
+        console.log("start");
+        event.stopPropagation();
+    })
+    const eventPropTwo = document.querySelector('.intro');
+    eventPropTwo.addEventListener("click", (event) => {
+        eventPropTwo.style.backgroundColor = "LemonChiffon";
+            console.log("middle");
+        })
+const eventPropThree = document.querySelector('.container.home');
+        eventPropThree.addEventListener("click", (event) => {
+            eventPropThree.style.backgroundColor = "CadetBlue";
+            console.log("end");
+            
+        })
+
