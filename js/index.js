@@ -125,3 +125,10 @@ const eventPropThree = document.querySelector('.container.home');
             
         })
 
+const prevDef = document.querySelectorAll('.nav-link');
+    prevDef.forEach(function(item) {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('clicked');
+        })
+    });
